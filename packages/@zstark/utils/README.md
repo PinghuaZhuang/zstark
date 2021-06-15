@@ -1,5 +1,7 @@
 # @zstark/utils
 
+[![Build Status](https://travis-ci.org/PinghuaZhuang/zstark.svg?branch=master)](https://travis-ci.org/PinghuaZhuang/zstark)
+
 工具/函数库.
 
 
@@ -22,5 +24,3 @@
    import dom from '@zstark/utils/lib/dom'
    import surpports from '@zstark/utils/lib/surpports'
    ```
-
-   

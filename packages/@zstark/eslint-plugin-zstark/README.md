@@ -1,4 +1,7 @@
 # @zstark/eslint-plugin-zstark
+
+[![Build Status](https://travis-ci.org/PinghuaZhuang/zstark.svg?branch=master)](https://travis-ci.org/PinghuaZhuang/zstark) 
+
 js, ts eslint-plugin.
 
 

@@ -1,5 +1,7 @@
 # @zstart/auth
 
+[![Build Status](https://travis-ci.org/PinghuaZhuang/zstark.svg?branch=master)](https://travis-ci.org/PinghuaZhuang/zstark) 
+
 快速接入统一登录. 支持 cjs, umd, esm.
 
 
