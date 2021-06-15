@@ -1,16 +1,14 @@
 {
-  "name": "@zstark/core",
-  "version": "0.0.0",
-  "description": "通过注释, 装饰器, DOM属性实现埋点插件. 避免破坏代码结构完整性, 提高代码可读性，也可以针对不同环境或者模式做不同埋点动作。",
+  "name": "@zstark/utils",
+  "version": "0.1.2",
+  "description": "工具/函数库.",
   "author": "zhuangpinghua <zphua2016@gmail.com>",
-  "homepage": "https://github.com/PinghuaZhuang/zstark/packages/@zstark/core#readme",
+  "homepage": "http://git.miguan.com/frontend/zstark/packages/@zstark/auth#readme",
   "bugs": {
-    "url": "https://github.com/PinghuaZhuang/zstark/issues"
+    "url": "http://git.miguan.com/frontend/zstark/issues"
   },
   "license": "ISC",
-  "main": "lib/index",
-  "esnext": "lib/index.esm",
-  "jsnext": "lib/index.aio.js",
+  "main": "lib/index.js",
   "directories": {},
   "files": [
     "lib",
@@ -27,7 +25,8 @@
     "url": "git@github.com:PinghuaZhuang/zstark.git"
   },
   "keywords": [
-    "ztrack"
+    "zstark",
+    "lib"
   ],
   "scripts": {
     "example": "http-server ./",
