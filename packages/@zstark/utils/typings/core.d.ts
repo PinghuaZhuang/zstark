@@ -16,7 +16,7 @@ export declare function getToken(env?: Env): string | undefined;
  * 创建缓存对象
  * @param { Number } length 缓存长度
  */
-export declare function createCache<T>(length: string): (key: string | ((k: string, v: T) => any), value: T) => string | any[] | T;
+export declare function createCache<T>(length: string): (key: string | ((k: string, v: T) => unknown), value: T) => string | T | unknown[];
 /**
  * 获取 UUID
  */

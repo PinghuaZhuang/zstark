@@ -6,7 +6,7 @@
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
 	typeof define === 'function' && define.amd ? define(['exports'], factory) :
-	(factory((global.nestarkUtils = {})));
+	(factory((global.zstarkUtils = {})));
 }(this, (function (exports) { 'use strict';
 
 	function unwrapExports (x) {
@@ -47,13 +47,13 @@
 	        trident: userAgent.indexOf('Trident') > -1,
 	        presto: userAgent.indexOf('Presto') > -1,
 	        webKit: userAgent.indexOf('AppleWebKit') > -1,
-	        gecko: userAgent.indexOf('Gecko') > -1 && userAgent.indexOf('KHTML') == -1,
+	        gecko: userAgent.indexOf('Gecko') > -1 && userAgent.indexOf('KHTML') === -1,
 	        mobile: !!userAgent.match(/AppleWebKit.*Mobile.*/),
 	        ios: !!userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
 	        android: userAgent.indexOf('Android') > -1 || userAgent.indexOf('Linux') > -1,
 	        iPhone: userAgent.indexOf('iPhone') > -1,
 	        iPad: userAgent.indexOf('iPad') > -1,
-	        safari: userAgent.indexOf('Safari') == -1
+	        safari: userAgent.indexOf('Safari') === -1
 	      },
 	      language: (navigator.browserLanguage || navigator.language).toLowerCase()
 	    };

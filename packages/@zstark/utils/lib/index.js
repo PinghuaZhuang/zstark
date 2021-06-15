@@ -34,13 +34,13 @@ if (inBrowser) {
             trident: userAgent.indexOf('Trident') > -1,
             presto: userAgent.indexOf('Presto') > -1,
             webKit: userAgent.indexOf('AppleWebKit') > -1,
-            gecko: userAgent.indexOf('Gecko') > -1 && userAgent.indexOf('KHTML') == -1,
+            gecko: userAgent.indexOf('Gecko') > -1 && userAgent.indexOf('KHTML') === -1,
             mobile: !!userAgent.match(/AppleWebKit.*Mobile.*/),
             ios: !!userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
             android: userAgent.indexOf('Android') > -1 || userAgent.indexOf('Linux') > -1,
             iPhone: userAgent.indexOf('iPhone') > -1,
             iPad: userAgent.indexOf('iPad') > -1,
-            safari: userAgent.indexOf('Safari') == -1
+            safari: userAgent.indexOf('Safari') === -1
         },
         language: (navigator.browserLanguage || navigator.language).toLowerCase()
     };
@@ -97,7 +97,7 @@ function getToken(env) {
  */
 function createCache(length) {
     const keys = [];
-    let cacheLength = length || 50;
+    const cacheLength = length || 50;
     function cache(key, value) {
         if (typeof key === 'function') {
             const cb = key;
@@ -116,8 +116,8 @@ function createCache(length) {
  */
 function getUUID() {
     let d = new Date().getTime();
-    let uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-        let r = (d + Math.random() * 16) % 16 | 0;
+    const uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+        const r = (d + Math.random() * 16) % 16 | 0;
         d = Math.floor(d / 16);
         return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
     });
@@ -132,7 +132,7 @@ function getUUID() {
  */
 function requestFullScreen(element) {
     element = element || document.documentElement;
-    let requestMethod = 
+    const requestMethod = 
     // @ts-ignore
     element.requestFullScreen ||
         // @ts-ignore
@@ -145,11 +145,11 @@ function requestFullScreen(element) {
         requestMethod.call(element);
         // @ts-ignore
     }
-    else if (typeof window.ActiveXObject !== "undefined") {
+    else if (typeof window.ActiveXObject !== 'undefined') {
         // @ts-ignore
-        let wscript = new ActiveXObject("WScript.Shell");
+        const wscript = new ActiveXObject('WScript.Shell');
         if (wscript !== null) {
-            wscript.SendKeys("{F11}");
+            wscript.SendKeys('{F11}');
         }
     }
 }
@@ -158,22 +158,22 @@ function requestFullScreen(element) {
  */
 function exitFullScreen() {
     // 判断各种浏览器，找到正确的方法
-    let exitMethod = document.exitFullscreen || //W3C
+    const exitMethod = document.exitFullscreen || // W3C
         // @ts-ignore
-        document.mozCancelFullScreen || //Chrome等
+        document.mozCancelFullScreen || // Chrome等
         // @ts-ignore
-        document.webkitExitFullscreen || //FireFox
+        document.webkitExitFullscreen || // FireFox
         // @ts-ignore
-        document.webkitExitFullscreen; //IE11
+        document.webkitExitFullscreen; // IE11
     if (exitMethod) {
         exitMethod.call(document);
         // @ts-ignore
     }
-    else if (typeof window.ActiveXObject !== "undefined") {
+    else if (typeof window.ActiveXObject !== 'undefined') {
         // @ts-ignore
-        let wscript = new ActiveXObject("WScript.Shell");
+        const wscript = new ActiveXObject('WScript.Shell');
         if (wscript !== null) {
-            wscript.SendKeys("{F11}");
+            wscript.SendKeys('{F11}');
         }
     }
 }
@@ -214,7 +214,7 @@ const scrollIntoView = function (container, selected) {
 function copyToClipboard(text) {
     if (text == null || text === '')
         return;
-    let textArea = document.createElement('textarea');
+    const textArea = document.createElement('textarea');
     textArea.value = text;
     textArea.focus();
     Object.assign(textArea.style, {

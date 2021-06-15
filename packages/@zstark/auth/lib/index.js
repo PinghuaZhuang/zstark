@@ -88,6 +88,9 @@ const EXPIRES = 15;
 function getKeyWithEnv(key, env = ENV_PRODUCTION) {
     return (env !== ENV_PRODUCTION && env.length) ? key + `-${env}` : key;
 }
+function setToken(token, env = ENV_PRODUCTION) {
+    Cookies.set(getKeyWithEnv(NAUTH_TOKEN, env), token, { expires: EXPIRES });
+}
 function getToken(env = ENV_PRODUCTION, params) {
     let token = Cookies.get(getKeyWithEnv(NAUTH_TOKEN, env));
     if (!token && params && (token = params[NAUTH_TOKEN.replace(/-/g, '_')])) {
@@ -96,8 +99,8 @@ function getToken(env = ENV_PRODUCTION, params) {
     }
     return token;
 }
-function setToken(token, env = ENV_PRODUCTION) {
-    Cookies.set(getKeyWithEnv(NAUTH_TOKEN, env), token, { expires: EXPIRES });
+function setUserId(userid, env = ENV_PRODUCTION) {
+    Cookies.set(getKeyWithEnv(NAUTH_USERID, env), userid, { expires: EXPIRES });
 }
 function getUserId(env = ENV_PRODUCTION, params) {
     let userId = Cookies.get(getKeyWithEnv(NAUTH_USERID, env));
@@ -107,8 +110,8 @@ function getUserId(env = ENV_PRODUCTION, params) {
     }
     return userId;
 }
-function setUserId(userid, env = ENV_PRODUCTION) {
-    Cookies.set(getKeyWithEnv(NAUTH_USERID, env), userid, { expires: EXPIRES });
+function setUserName(username, env = ENV_PRODUCTION) {
+    Cookies.set(getKeyWithEnv(NAUTH_USERNAME, env), username, { expires: EXPIRES });
 }
 function getUserName(env = ENV_PRODUCTION, params) {
     let username = Cookies.get(getKeyWithEnv(NAUTH_USERNAME, env));
@@ -117,9 +120,6 @@ function getUserName(env = ENV_PRODUCTION, params) {
         return username;
     }
     return username;
-}
-function setUserName(username, env = ENV_PRODUCTION) {
-    Cookies.set(getKeyWithEnv(NAUTH_USERNAME, env), username, { expires: EXPIRES });
 }
 function removeAll(env = ENV_PRODUCTION) {
     Cookies.remove(getKeyWithEnv(NAUTH_USERNAME, env));
@@ -185,6 +185,7 @@ function fetchEhrProject(env, params) {
     }).then(res => res.json());
 }
 
+/* eslint-disable @typescript-eslint/no-use-before-define */
 const AuthHandle = {
     started: false,
     path: '/login',
@@ -209,7 +210,7 @@ const AuthHandle = {
                 }
                 if (this.isAuthLogin(e.data.from.path)) {
                     // 跳转到根目录
-                    return window.location.href = window.location.origin;
+                    return (window.location.href = window.location.origin);
                 }
                 // 跳转到原有的地址上
                 window.location.href = window.location.origin + e.data.from.fullPath;

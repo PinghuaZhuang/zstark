@@ -6,7 +6,7 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
-  (factory((global.nestarkUtils = {})));
+  (factory((global.zstarkUtils = {})));
 }(this, (function (exports) { 'use strict';
 
   function _typeof(obj) {
@@ -238,13 +238,13 @@
           trident: userAgent.indexOf('Trident') > -1,
           presto: userAgent.indexOf('Presto') > -1,
           webKit: userAgent.indexOf('AppleWebKit') > -1,
-          gecko: userAgent.indexOf('Gecko') > -1 && userAgent.indexOf('KHTML') == -1,
+          gecko: userAgent.indexOf('Gecko') > -1 && userAgent.indexOf('KHTML') === -1,
           mobile: !!userAgent.match(/AppleWebKit.*Mobile.*/),
           ios: !!userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
           android: userAgent.indexOf('Android') > -1 || userAgent.indexOf('Linux') > -1,
           iPhone: userAgent.indexOf('iPhone') > -1,
           iPad: userAgent.indexOf('iPad') > -1,
-          safari: userAgent.indexOf('Safari') == -1
+          safari: userAgent.indexOf('Safari') === -1
         },
         language: (navigator.browserLanguage || navigator.language).toLowerCase()
       };
@@ -360,12 +360,12 @@
 
       if (requestMethod) {
         requestMethod.call(element); // @ts-ignore
-      } else if (typeof window.ActiveXObject !== "undefined") {
+      } else if (typeof window.ActiveXObject !== 'undefined') {
         // @ts-ignore
-        var wscript = new ActiveXObject("WScript.Shell");
+        var wscript = new ActiveXObject('WScript.Shell');
 
         if (wscript !== null) {
-          wscript.SendKeys("{F11}");
+          wscript.SendKeys('{F11}');
         }
       }
     }
@@ -376,22 +376,22 @@
 
     function exitFullScreen() {
       // 判断各种浏览器，找到正确的方法
-      var exitMethod = document.exitFullscreen || //W3C
+      var exitMethod = document.exitFullscreen || // W3C
       // @ts-ignore
-      document.mozCancelFullScreen || //Chrome等
+      document.mozCancelFullScreen || // Chrome等
       // @ts-ignore
-      document.webkitExitFullscreen || //FireFox
+      document.webkitExitFullscreen || // FireFox
       // @ts-ignore
-      document.webkitExitFullscreen; //IE11
+      document.webkitExitFullscreen; // IE11
 
       if (exitMethod) {
         exitMethod.call(document); // @ts-ignore
-      } else if (typeof window.ActiveXObject !== "undefined") {
+      } else if (typeof window.ActiveXObject !== 'undefined') {
         // @ts-ignore
-        var wscript = new ActiveXObject("WScript.Shell");
+        var wscript = new ActiveXObject('WScript.Shell');
 
         if (wscript !== null) {
-          wscript.SendKeys("{F11}");
+          wscript.SendKeys('{F11}');
         }
       }
     }

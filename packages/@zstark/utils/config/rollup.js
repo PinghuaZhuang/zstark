@@ -58,7 +58,7 @@ function getReplace() {
 }
 
 
-exports.name = 'nestarkUtils';
+exports.name = 'zstarkUtils';
 exports.banner = banner;
 exports.getCompiler = getCompiler;
 exports.getReplace = getReplace;

@@ -39,7 +39,7 @@ const scrollIntoView = function (container, selected) {
 function copyToClipboard(text) {
     if (text == null || text === '')
         return;
-    let textArea = document.createElement('textarea');
+    const textArea = document.createElement('textarea');
     textArea.value = text;
     textArea.focus();
     Object.assign(textArea.style, {

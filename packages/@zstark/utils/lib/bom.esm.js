@@ -11,7 +11,7 @@
  */
 function requestFullScreen(element) {
     element = element || document.documentElement;
-    let requestMethod = 
+    const requestMethod = 
     // @ts-ignore
     element.requestFullScreen ||
         // @ts-ignore
@@ -24,11 +24,11 @@ function requestFullScreen(element) {
         requestMethod.call(element);
         // @ts-ignore
     }
-    else if (typeof window.ActiveXObject !== "undefined") {
+    else if (typeof window.ActiveXObject !== 'undefined') {
         // @ts-ignore
-        let wscript = new ActiveXObject("WScript.Shell");
+        const wscript = new ActiveXObject('WScript.Shell');
         if (wscript !== null) {
-            wscript.SendKeys("{F11}");
+            wscript.SendKeys('{F11}');
         }
     }
 }
@@ -37,22 +37,22 @@ function requestFullScreen(element) {
  */
 function exitFullScreen() {
     // 判断各种浏览器，找到正确的方法
-    let exitMethod = document.exitFullscreen || //W3C
+    const exitMethod = document.exitFullscreen || // W3C
         // @ts-ignore
-        document.mozCancelFullScreen || //Chrome等
+        document.mozCancelFullScreen || // Chrome等
         // @ts-ignore
-        document.webkitExitFullscreen || //FireFox
+        document.webkitExitFullscreen || // FireFox
         // @ts-ignore
-        document.webkitExitFullscreen; //IE11
+        document.webkitExitFullscreen; // IE11
     if (exitMethod) {
         exitMethod.call(document);
         // @ts-ignore
     }
-    else if (typeof window.ActiveXObject !== "undefined") {
+    else if (typeof window.ActiveXObject !== 'undefined') {
         // @ts-ignore
-        let wscript = new ActiveXObject("WScript.Shell");
+        const wscript = new ActiveXObject('WScript.Shell');
         if (wscript !== null) {
-            wscript.SendKeys("{F11}");
+            wscript.SendKeys('{F11}');
         }
     }
 }

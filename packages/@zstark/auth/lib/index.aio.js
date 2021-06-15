@@ -5,7 +5,7 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
-  (factory((global.nestarkAuth = {})));
+  (factory((global.zstarkAuth = {})));
 }(this, (function (exports) { 'use strict';
 
   function _typeof(obj) {
@@ -2316,6 +2316,13 @@
       return env !== ENV_PRODUCTION && env.length ? key + "-".concat(env) : key;
     }
 
+    function setToken(token) {
+      var env = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : ENV_PRODUCTION;
+      Cookies.set(getKeyWithEnv(NAUTH_TOKEN, env), token, {
+        expires: EXPIRES
+      });
+    }
+
     function getToken() {
       var env = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : ENV_PRODUCTION;
       var params = arguments.length > 1 ? arguments[1] : undefined;
@@ -2329,9 +2336,9 @@
       return token;
     }
 
-    function setToken(token) {
+    function setUserId(userid) {
       var env = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : ENV_PRODUCTION;
-      Cookies.set(getKeyWithEnv(NAUTH_TOKEN, env), token, {
+      Cookies.set(getKeyWithEnv(NAUTH_USERID, env), userid, {
         expires: EXPIRES
       });
     }
@@ -2349,9 +2356,9 @@
       return userId;
     }
 
-    function setUserId(userid) {
+    function setUserName(username) {
       var env = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : ENV_PRODUCTION;
-      Cookies.set(getKeyWithEnv(NAUTH_USERID, env), userid, {
+      Cookies.set(getKeyWithEnv(NAUTH_USERNAME, env), username, {
         expires: EXPIRES
       });
     }
@@ -2367,13 +2374,6 @@
       }
 
       return username;
-    }
-
-    function setUserName(username) {
-      var env = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : ENV_PRODUCTION;
-      Cookies.set(getKeyWithEnv(NAUTH_USERNAME, env), username, {
-        expires: EXPIRES
-      });
     }
 
     function removeAll() {
@@ -2461,6 +2461,8 @@
         return res.json();
       });
     }
+    /* eslint-disable @typescript-eslint/no-use-before-define */
+
 
     var AuthHandle = {
       started: false,

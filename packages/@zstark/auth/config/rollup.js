@@ -57,7 +57,7 @@ function getReplace() {
 }
 
 
-exports.name = 'nestarkAuth';
+exports.name = 'zstarkAuth';
 exports.banner = banner;
 exports.getCompiler = getCompiler;
 exports.getReplace = getReplace

@@ -4,7 +4,7 @@ declare const HOOK_BEFORE = "nehook:auth-befroe";
 declare const HOOK_AFTER = "nehook:auth-after";
 interface AuthEvent {
     type: typeof HOOK_BEFORE | typeof HOOK_AFTER;
-    data: any;
+    data: unknown;
 }
 export interface AuthEventBefore extends AuthEvent {
     data: {

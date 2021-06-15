@@ -35,4 +35,4 @@ export declare function fetchUserInfo(env: string, params: {
 }): Promise<ApiResult<UserInfo>>;
 export declare function fetchEhrProject(env: string, params: {
     userId: string | number;
-}): Promise<ApiResult<Array<EHRRouterInfo>>>;
+}): Promise<ApiResult<EHRRouterInfo[]>>;
