@@ -42,8 +42,8 @@ export function getKeyWithEnv(key: string, env: string = getEnv(), template = '{
   // 只有localdev有后缀
   return (env !== 'production' && env.length)
     ? (template
-        .replace(/{k}/g, key)
-        .replace(/{env}/g, env))
+      .replace(/{k}/g, key)
+      .replace(/{env}/g, env))
     : key
 }
 
@@ -58,21 +58,21 @@ export function getToken(env?: Env): string | undefined {
  * 创建缓存对象
  * @param { Number } length 缓存长度
  */
- export function createCache<T>(length: string) {
+export function createCache<T>(length: string) {
   const keys: string[] = []
-  let cacheLength = length || 50
+  const cacheLength = length || 50
 
-  function cache(key: string | ((k: string, v: T) => any), value: T) {
-      if (typeof key === 'function') {
-        const cb = key
-        // @ts-ignore
-        return keys.map(k => cb(k.replace(/\s$/, ''), cache[k + ' '])) as any[]
-      }
+  function cache(key: string | ((k: string, v: T) => unknown), value: T) {
+    if (typeof key === 'function') {
+      const cb = key
+      // @ts-ignore
+      return keys.map(k => cb(k.replace(/\s$/, ''), cache[k + ' '])) as unknown[]
+    }
 
-      if (keys.push(key + ' ') > cacheLength) {
-          delete cache[keys.shift() as string]
-      }
-      return (value == null ? cache[key + ' '] : (cache[key + ' '] = value)) as string | T
+    if (keys.push(key + ' ') > cacheLength) {
+      delete cache[keys.shift() as string]
+    }
+    return (value == null ? cache[key + ' '] : (cache[key + ' '] = value)) as string | T
   }
   return cache
 }
@@ -80,12 +80,12 @@ export function getToken(env?: Env): string | undefined {
 /**
  * 获取 UUID
  */
- export function getUUID(): string {
+export function getUUID(): string {
   let d = new Date().getTime()
-  let uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-      let r = (d + Math.random() * 16) % 16 | 0
-      d = Math.floor(d / 16)
-      return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16)
+  const uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    const r = (d + Math.random() * 16) % 16 | 0
+    d = Math.floor(d / 16)
+    return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16)
   })
   return uuid
 }

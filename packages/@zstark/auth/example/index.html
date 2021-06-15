@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>@nestark/auth example</title>
+  <script src="../lib/index.aio.js"></script>
+</head>
+<body>
+  <h1>@nestark/auth example</h1>
+
+  <button id="login">login</button>
+  <button id="loginOut">loginOut</button>
+
+  <script>
+    var loginBtn = document.querySelector('#login')
+    var loginOutBtn = document.querySelector('#loginOut')
+    var nestarkAuth = window.nestarkAuth
+
+    nestarkAuth.start({
+      path: '/example/:id?/custom-login.html',
+      after(e) {
+        console.log('after:e:', e)
+
+        // eslint-disable-next-line
+        debugger
+
+        // 登录成功后调整打首页
+        // 不传 after hook 函数, 默认跳转到 window.location.origin
+        // 默认跳转会导致页面刷新
+        window.location.href = window.location.origin + '/example/'
+      },
+      onLoginOut(next, options) {
+        console.log('onloginOut options:', options)
+        debugger
+        next()
+      },
+      onLogin(next, options) {
+        console.log('onLogin options:', options)
+        debugger
+        next()
+      },
+    })
+
+    console.log('nestarkAuth', nestarkAuth)
+
+    loginBtn.onclick = function () {
+      nestarkAuth.login({ id: 123 }, 'mobile=true')
+    }
+
+    loginOutBtn.onclick = function () {
+      nestarkAuth.loginOut({}, 'mobile=true')
+    }
+  </script>
+</body>
+</html>

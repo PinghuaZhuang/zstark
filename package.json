@@ -1,6 +1,6 @@
 {
   "name": "zstark",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "面向前端后台应用快速开发的解决方案.",
   "main": "/packages/@zstark/core",
   "scripts": {
@@ -44,16 +44,15 @@
     "stylelint": "^13.1.0",
     "typescript": "~4.1.5"
   },
-  "private": false,
+  "private": true,
   "workspaces": [
-    "packages/@ztrack/*"
+    "packages/@zstark/*"
   ],
   "useWorkspaces": true,
   "npmClient": "yarn",
   "keywords": [
-    "template",
-    "mono-repo",
-    "typescript"
+    "admin",
+    "zstark"
   ],
   "author": "zphua2016@gmail.com",
   "license": "MIT",

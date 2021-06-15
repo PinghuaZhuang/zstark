@@ -20,9 +20,18 @@ module.exports = {
 		},
   },
   globals: {
-    VERSION: true,
+    PKG_VERSION: true,
+    require: true,
+    Promise: true,
+    ActiveXObject: true,
   },
   rules: {
+    "@typescript-eslint/indent": ["error", 2],
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+
+    "no-useless-call": "off",
+
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
     "accessor-pairs": 2,
@@ -146,7 +155,7 @@ module.exports = {
       "vars": "all",
       "args": "none"
     }],
-    "no-useless-call": 2,
+    // "no-useless-call": 2,
     "no-useless-computed-key": 2,
     "no-useless-constructor": 2,
     "no-useless-escape": 0,

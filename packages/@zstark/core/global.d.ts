@@ -1,1 +1,1 @@
-declare const VERSION: string
+declare const PKG_VERSION: string

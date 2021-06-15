@@ -1,5 +1,5 @@
 const core = {
-  version: VERSION,
+  version: PKG_VERSION,
 }
 
 export default core

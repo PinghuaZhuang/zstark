@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>custom-login-123</title>
+  <script src="../../lib/index.aio.js"></script>
+</head>
+<body>
+  <h1>登录页面 123</h1>
+
+  <script>
+    var nestarkAuth = window.nestarkAuth
+
+    nestarkAuth.start({ path: '/example/:id?/custom-login.html', after(e) {
+      console.log('after:e:', e)
+
+      // eslint-disable-next-line
+      debugger
+
+      // 登录成功后调整打首页
+      // 不传 after hook 函数, 默认跳转到 window.location.origin
+      // 默认跳转会导致页面刷新
+      window.location.href = window.location.origin + '/example/'
+    }, })
+  </script>
+</body>
+</html>

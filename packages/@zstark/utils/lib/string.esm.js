@@ -1,5 +1,5 @@
 /*!
- * @nestark/utils 0.1.1
+ * @zstark/utils 0.1.2
  */
 /// <reference path="../typings/string.d.ts" />
 

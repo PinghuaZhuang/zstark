@@ -27,7 +27,7 @@
     "url": "git@github.com:PinghuaZhuang/zstark.git"
   },
   "keywords": [
-    "ztrack"
+    "zstark"
   ],
   "scripts": {
     "example": "http-server ./",

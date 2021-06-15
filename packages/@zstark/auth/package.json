@@ -1,14 +1,16 @@
 {
-  "name": "@zstark/utils",
-  "version": "0.1.2",
-  "description": "工具/函数库.",
+  "name": "@zstark/auth",
+  "version": "1.3.4",
+  "description": "前端公用模块-统一登录.",
   "author": "zhuangpinghua <zphua2016@gmail.com>",
   "homepage": "http://git.miguan.com/frontend/zstark/packages/@zstark/auth#readme",
   "bugs": {
     "url": "https://github.com/PinghuaZhuang/zstark/issues"
   },
   "license": "ISC",
-  "main": "lib/index.js",
+  "main": "lib/index",
+  "esnext": "lib/index.esm",
+  "jsnext": "lib/index.aio.js",
   "directories": {},
   "files": [
     "lib",
@@ -26,7 +28,7 @@
   },
   "keywords": [
     "zstark",
-    "lib"
+    "auth"
   ],
   "scripts": {
     "example": "http-server ./",
@@ -38,13 +40,21 @@
     "build:aio.min": "cross-env NODE_ENV=production npm run build:aio",
     "build": "npm run clean && npm run build:self && npm run build:esm && npm run build:aio && npm run build:aio.min"
   },
+  "dependencies": {
+    "js-cookie": "^2.2.1",
+    "lodash": "^4.17.21",
+    "path-to-regexp": "^6.2.0"
+  },
   "devDependencies": {
     "@babel/cli": "^7.13.16",
     "@babel/core": "^7.13.16",
     "@babel/plugin-transform-runtime": "^7.13.15",
     "@babel/preset-env": "^7.13.15",
+    "@types/events": "^3.0.0",
     "@types/js-cookie": "^2.2.6",
     "@types/lodash": "^4.14.168",
+    "@types/node": "^15.12.2",
+    "@types/qs": "^6.9.6",
     "@typescript-eslint/eslint-plugin": "^1.4.2",
     "@typescript-eslint/parser": "^1.4.2",
     "cross-env": "5.2.0",
