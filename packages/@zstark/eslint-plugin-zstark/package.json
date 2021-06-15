@@ -29,7 +29,9 @@
     "eslint",
     "eslint-plugin-zstark"
   ],
-  "scripts": {},
+  "scripts": {
+    "build": "echo 1"
+  },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "@types/jest": "^24.0.19",

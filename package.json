@@ -5,7 +5,8 @@
   "main": "/packages/@zstark/core",
   "scripts": {
     "example:core": "http-server ./packages/@zstark/core",
-    "publish": "lerna publish --no-verify-access --tag-version-prefix='zstark_v'",
+    "build": "yarn workspaces run build",
+    "publish": "npm run build && lerna publish --no-verify-access --tag-version-prefix='zstark_v'",
     "lint": "npm run eslint",
     "lint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx,.vue packages",
     "eslint": "eslint --cache --ext .jsx,.js,.ts,.tsx packages",
