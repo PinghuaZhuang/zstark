@@ -1,23 +1,23 @@
-# @nestart/auth
+# @zstart/auth
 
 快速接入统一登录. 支持 cjs, umd, esm.
 
 
 
-## Quick Start
+## 🚀 Quick Start
 
 1. 安装依赖.
 
    ```bash
-   yarn add @nestark/auth --registry=http://192.168.100.8:4873
+   yarn add @zstark/auth
    # 或者
-   npm install @nestark/auth --registry=http://192.168.100.8:4873 --save
+   npm install @zstark/auth --save
    ```
 
 2. 入口文件引入依赖.
 
    ```bash
-   import nestarkAuth, { start, loginOut, login } from '@nestark/auth';
+   import zstarkAuth, { start, loginOut, login } from '@zstark/auth';
    ```
 
 3. 启动.
@@ -25,6 +25,7 @@
    ```bash
    start();
    ```
+
 
 
 ## Example
@@ -36,7 +37,8 @@ npm run example
 启动后访问 `http://localhost:8080/example/index.html`
 
 
-## nestark
+
+## zstark
 
 ![image-20210422174751271](https://cdn.jsdelivr.net/gh/PinghuaZhuang/note@master/images/image-20210422174751271.70pefa8c3eo0.png)
 
@@ -70,20 +72,20 @@ npm run example
 
 + params?: object | string; 路由参数(string的使用是query参数).
 
-### nestarkAuth.getUserInfo
+### zstarkAuth.getUserInfo
 
 获取用户基本信息.
 
-### nestarkAuth.getUserInfoAll
+### zstarkAuth.getUserInfoAll
 
 `@return Promise<ApiResult<UserInfo>>`
 
 获取用户详细信息
 
-### nestarkAuth.getProjectId
+### zstarkAuth.getProjectId
 
 `@return Promise<number|null>`
 
-`@example nestarkAuth.getProjectId('operation', { k: 'wnl' }).then(projectId => console.log('projectId', projectId))`
+`@example zstarkAuth.getProjectId('operation', { k: 'wnl' }).then(projectId => console.log('projectId', projectId))`
 
 获取项目ID, 项目ID需要后台在EHR菜单中配置. 默认为null.

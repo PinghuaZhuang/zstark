@@ -10,6 +10,6 @@
 - [ ]  权限校验
 - [x]  工具包
 - [ ]  自动化埋点
-- [ ]  eslint-plugin-zstark
+- [x]  eslint-plugin-zstark
 - [ ]  ~~UI库~~
 

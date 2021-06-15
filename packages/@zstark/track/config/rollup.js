@@ -10,7 +10,6 @@ var banner =
 `/*!
  * ${pkg.name} ${version}
  */
-/// <reference path="../typings/{dts}.d.ts" />
 `;
 
 function getCompiler(opt = {}, isJs) {
@@ -58,8 +57,7 @@ function getReplace() {
 }
 
 
-exports.name = 'nestarkUtils';
+exports.name = 'zstarkTrack';
 exports.banner = banner;
 exports.getCompiler = getCompiler;
-exports.getReplace = getReplace;
-exports.files = ['bom', 'dom', 'index', 'string', 'surpport'];
+exports.getReplace = getReplace

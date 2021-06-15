@@ -1,16 +1,31 @@
-# eslint-plugin-zstark
+# @zstark/eslint-plugin-zstark
 js, ts eslint-plugin.
 
-## 在项目中使用
 
-在根目录下添加 .eslintrc.js
-```js
-module.exports = {
-  extends: [require.resolve('@zstark/eslint-plugin-zstark')],
-}
-```
 
-## script 命令
+## 🚀 Quick Start
+
+1. 安装依赖.
+
+   ```bash
+   yarn add @zstark/eslint-plugin-zstark
+   # 或者
+   npm install @zstark/eslint-plugin-zstark --save
+   ```
+
+
+2. 在根目录下添加 .eslintrc.js
+
+   ```js
+   module.exports = {
+     extends: [require.resolve('@zstark/eslint-plugin-zstark')],
+   }
+   ```
+
+   
+
+## 🔖 script 命令
+
 package.json中添加
 ```json
 {
@@ -21,7 +36,10 @@ package.json中添加
 }
 ```
 
-## vsCode IDE 中使用 eslint 格式化配置
+
+
+## 🔖 vs-code IDE 中使用 eslint 格式化配置
+
 ```json
 {
   "eslint.format.enable": true,
