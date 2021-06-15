@@ -1,0 +1,8 @@
+{
+  "eslint.format.enable": true,
+  "eslint.validate": ["Typescript", "Typescript React", "React"],
+  "eslint.options": {
+    // "configFile": ".eslintrc.js",
+    "plugins": ["@typescript-eslint"]
+  },
+}

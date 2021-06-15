@@ -1,0 +1,65 @@
+{
+  "name": "zstark",
+  "version": "0.0.1",
+  "description": "通过注释, 装饰器, DOM属性实现埋点插件. 避免破坏代码结构完整性, 提高代码可读性，也可以针对不同环境或者模式做不同埋点动作。",
+  "main": "/packages/@zstark/core",
+  "scripts": {
+    "example:core": "http-server ./packages/@zstark/core",
+    "publish": "lerna publish --no-verify-access --tag-version-prefix='zstark_v'",
+    "lint": "npm run eslint",
+    "eslint": "eslint --cache --ext .jsx,.js,.ts,.tsx packages",
+    "stylelint": "stylelint ./**/*.scss",
+    "log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:PinghuaZhuang/track-report.git"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@types/jest": "^24.0.19",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "babel-eslint": "^10.1.0",
+    "cache-loader": "^4.1.0",
+    "conventional-changelog-cli": "^2.1.0",
+    "core-js": "^2.6.5",
+    "eslint": "^7.12.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-typescript": "^0.14.0",
+    "husky": "^4.3.0",
+    "lerna": "^3.22.1",
+    "lint-staged": "^9.5.0",
+    "prettier": "^2.2.1",
+    "stylelint": "^13.1.0",
+    "typescript": "~4.1.5"
+  },
+  "private": false,
+  "workspaces": [
+    "packages/@ztrack/*"
+  ],
+  "useWorkspaces": true,
+  "npmClient": "yarn",
+  "keywords": [
+    "template",
+    "mono-repo",
+    "typescript"
+  ],
+  "author": "zphua2016@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PinghuaZhuang/track-report/issues"
+  },
+  "homepage": "https://github.com/PinghuaZhuang/track-report",
+  "dependencies": {}
+}
