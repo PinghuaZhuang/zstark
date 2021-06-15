@@ -3,7 +3,7 @@
   "version": "0.1.2",
   "description": "工具/函数库.",
   "author": "zhuangpinghua <zphua2016@gmail.com>",
-  "homepage": "http://git.miguan.com/frontend/zstark/packages/@zstark/auth#readme",
+  "homepage": "https://github.com/PinghuaZhuang/zstark/tree/master/packages/%40zstark/utils",
   "bugs": {
     "url": "https://github.com/PinghuaZhuang/zstark/issues"
   },

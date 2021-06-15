@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "通过注释, 装饰器, DOM属性实现埋点插件. 避免破坏代码结构完整性, 提高代码可读性，也可以针对不同环境或者模式做不同埋点动作。",
   "author": "zhuangpinghua <zphua2016@gmail.com>",
-  "homepage": "https://github.com/PinghuaZhuang/zstark/packages/@zstark/core#readme",
+  "homepage": "https://github.com/PinghuaZhuang/zstark/tree/master/packages/%40zstark/core",
   "bugs": {
     "url": "https://github.com/PinghuaZhuang/zstark/issues"
   },

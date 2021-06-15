@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "eslint插件",
   "author": "zhuangpinghua <zphua2016@gmail.com>",
-  "homepage": "https://github.com/PinghuaZhuang/zstark/packages/@zstark/eslint-plugin-zstark#readme",
+  "homepage": "https://github.com/PinghuaZhuang/zstark/tree/master/packages/%40zstark/eslint-plugin-zstark",
   "bugs": {
     "url": "https://github.com/PinghuaZhuang/zstark/issues"
   },
