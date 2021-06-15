@@ -1,7 +1,7 @@
 {
   "name": "zstark",
   "version": "0.0.1",
-  "description": "通过注释, 装饰器, DOM属性实现埋点插件. 避免破坏代码结构完整性, 提高代码可读性，也可以针对不同环境或者模式做不同埋点动作。",
+  "description": "面向前端后台应用快速开发的解决方案.",
   "main": "/packages/@zstark/core",
   "scripts": {
     "example:core": "http-server ./packages/@zstark/core",
