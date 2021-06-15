@@ -11,7 +11,8 @@
     "lint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx,.vue packages",
     "eslint": "eslint --cache --ext .jsx,.js,.ts,.tsx packages",
     "stylelint": "stylelint ./**/*.scss",
-    "log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
+    "log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
+    "test": ""
   },
   "publishConfig": {
     "access": "public"
