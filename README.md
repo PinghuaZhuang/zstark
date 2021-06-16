@@ -1,4 +1,4 @@
-# @zstark/core
+# @zstark
 
 [![Build Status](https://travis-ci.org/PinghuaZhuang/zstark.svg?branch=master)](https://travis-ci.org/PinghuaZhuang/zstark) [![Size](https://img.shields.io/github/languages/code-size/pinghuazhuang/zstark.svg)](https://github.com/PinghuaZhuang/zstark) [![Commit](https://img.shields.io/github/last-commit/pinghuazhuang/zstark.svg)](https://github.com/PinghuaZhuang/zstark/commits/master)
 
@@ -14,4 +14,3 @@
 - [ ]  自动化埋点
 - [x]  eslint-plugin-zstark
 - [ ]  ~~UI库~~
-

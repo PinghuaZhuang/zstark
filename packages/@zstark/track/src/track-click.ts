@@ -1,3 +1,7 @@
+/**
+ * @file 全局代理点击事件
+ * @type track-click
+ */
 import { addEventListener/* , removeEventListener */, trackEmit } from './utils'
 
 interface TrackClickParams {
@@ -8,31 +12,33 @@ interface TrackClickParams {
 const handleClick = function(e: MouseEvent) {
   const target = e.target
   if (target && target instanceof Element) {
-    let trackParamsStr: unknown = target.getAttribute('track-click')
+    const trackParamsStr = target.getAttribute('track-click')
 
     if (trackParamsStr == null) {
       console.error(`<<< track-click attribute error. target:`, target)
       return
     }
 
+    let trackParamsParse: TrackClickParams | string = ''
+
     try {
       // to TrackClickParams
-      trackParamsStr = JSON.parse(trackParamsStr as string)
+      trackParamsParse = JSON.parse(trackParamsStr)
     } catch (error) { /* empty... */ }
 
     let trackType: string
     let trackParams: object
 
-    // const trackType = typeof trackParams === 'string' ? trackParams : (trackParams as TrackClickParams).type
-    if (typeof trackParamsStr === 'string') {
-      trackType = trackParamsStr
+    if (typeof trackParamsParse === 'string') {
+      trackType = trackParamsParse
       trackParams = {}
     } else {
-      trackType = (trackParamsStr as TrackClickParams).type
-      trackParams = (trackParamsStr as TrackClickParams).params
+      trackType = trackParamsParse.type
+      trackParams = trackParamsParse.params
     }
 
     trackEmit(trackType, trackParams)
+    // or custom event
   }
 }
 
