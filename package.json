@@ -1,8 +1,26 @@
 {
   "name": "zstark",
   "version": "0.0.0",
+  "private": true,
   "description": "面向前端后台应用快速开发的解决方案.",
+  "keywords": [
+    "admin",
+    "zstark"
+  ],
+  "homepage": "https://github.com/PinghuaZhuang/track-report",
+  "bugs": {
+    "url": "https://github.com/PinghuaZhuang/track-report/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:PinghuaZhuang/track-report.git"
+  },
+  "license": "MIT",
+  "author": "zphua2016@gmail.com",
   "main": "/packages/@zstark/core",
+  "workspaces": [
+    "packages/@zstark/*"
+  ],
   "scripts": {
     "example:core": "http-server ./packages/@zstark/core",
     "build": "yarn workspaces run build",
@@ -12,10 +30,8 @@
     "eslint": "eslint --cache --ext .jsx,.js,.ts,.tsx packages",
     "stylelint": "stylelint ./**/*.scss",
     "log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
+    "sort": "sort-package-json package.json",
     "test": ""
-  },
-  "publishConfig": {
-    "access": "public"
   },
   "husky": {
     "hooks": {
@@ -23,10 +39,7 @@
       "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
     }
   },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:PinghuaZhuang/track-report.git"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
@@ -37,24 +50,13 @@
     "lerna": "^3.22.1",
     "lint-staged": "^9.5.0",
     "prettier": "^2.2.1",
+    "sort-package-json": "^1.50.0",
     "stylelint": "^13.1.0",
     "typescript": "~4.1.5"
   },
-  "private": true,
-  "workspaces": [
-    "packages/@zstark/*"
-  ],
-  "useWorkspaces": true,
-  "npmClient": "yarn",
-  "keywords": [
-    "admin",
-    "zstark"
-  ],
-  "author": "zphua2016@gmail.com",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/PinghuaZhuang/track-report/issues"
+  "publishConfig": {
+    "access": "public"
   },
-  "homepage": "https://github.com/PinghuaZhuang/track-report",
-  "dependencies": {}
+  "npmClient": "yarn",
+  "useWorkspaces": true
 }
