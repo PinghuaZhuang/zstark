@@ -1,4 +1,4 @@
-export declare const fetch: (input: RequestInfo, init?: RequestInit | undefined) => Promise<Response>;
+export declare const fetch: ((input: RequestInfo, init?: RequestInit | undefined) => Promise<Response>) & typeof globalThis.fetch;
 export interface ApiResult<T> {
     code: number;
     data: T;
