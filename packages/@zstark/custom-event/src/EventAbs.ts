@@ -6,7 +6,7 @@ class EventAbs<T> {
   public data: T
 
   public constructor(data: T) {
-    this.data = { ...data }
+    this.data = Object.assign({}, data)
   }
 
   public get type() {

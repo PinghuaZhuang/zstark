@@ -8,7 +8,6 @@ interface SensorOptions {
 
 class SensorAbs<T extends EventAbs<object>> {
   public static type: string = 'sensor'
-  private static version: string = PKG_VERSION
 
   public containers: Element[]
   public readonly options: SensorOptions
@@ -18,7 +17,7 @@ class SensorAbs<T extends EventAbs<object>> {
     cancelable: true,
     useCapture: false,
   }) {
-    this.options = { ...options }
+    this.options = Object.assign({}, options)
 
     if (!Array.isArray(containers)) {
       this.containers = [containers]
@@ -59,9 +58,7 @@ class SensorAbs<T extends EventAbs<object>> {
     }
 
     const event = new CustomEvent(sensorEvent.type, {
-      detail: {
-        ...sensorEvent.data,
-      },
+      detail: Object.assign({}, sensorEvent.data),
       bubbles: this.options.bubbles === true, // 默认值 false
       cancelable: !(this.options.cancelable === false), // 默认值 true
     })

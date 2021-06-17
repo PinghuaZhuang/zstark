@@ -57,7 +57,7 @@ function getReplace() {
 }
 
 
-exports.name = 'zstarkTrack';
+exports.name = 'zstarkCustomEvent';
 exports.banner = banner;
 exports.getCompiler = getCompiler;
 exports.getReplace = getReplace
