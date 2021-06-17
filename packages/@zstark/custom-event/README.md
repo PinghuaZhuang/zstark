@@ -1,8 +1,19 @@
+# @zstark/custom-event
+
+[![Build Status](https://travis-ci.org/PinghuaZhuang/zstark.svg?branch=master)](https://travis-ci.org/PinghuaZhuang/zstark) 
+
+自定义事件.
+
+
+
+## 📰 Example
+
+```typescript
 import { EventAbs, SensorAbs } from '@zstark/custom-event'
 
 interface TrackClickParams {
-  type: string; // report type
-  params: object; // report params
+  type: string;
+  params: object;
 }
 
 class TrackClickEvent extends EventAbs<TrackClickParams> {
@@ -23,7 +34,7 @@ class TrackClick extends SensorAbs<TrackClickEvent> {
       const trackParamsStr = target.getAttribute('track-click')
 
       if (trackParamsStr == null) {
-        console.error(`<<< track-click get attribute error. target:`, target)
+        console.error(`<<< track-click attribute error. target:`, target)
         return
       }
 
@@ -57,7 +68,9 @@ const instance = new TrackClick(document.body)
 // 注册事件
 instance.on(e => {
   // do something...
-  console.log('e:', e.type, e.detail.type, e.detail.params)
+  console.log('e:', e.detail.type, e.detail.params)
 })
 // 添加事件
 instance.attach()
+```
+

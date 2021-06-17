@@ -57,7 +57,7 @@ class SensorAbs<T extends EventAbs<object>> {
       return
     }
 
-    const event = new CustomEvent(sensorEvent.type, {
+    const event = new CustomEvent<typeof sensorEvent.data>(sensorEvent.type, {
       detail: Object.assign({}, sensorEvent.data),
       bubbles: this.options.bubbles === true, // 默认值 false
       cancelable: !(this.options.cancelable === false), // 默认值 true

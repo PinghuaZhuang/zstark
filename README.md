@@ -12,5 +12,6 @@
 - [ ]  权限校验
 - [x]  工具包
 - [ ]  自动化埋点
+- [x]  custom-event
 - [x]  eslint-plugin-zstark
 - [ ]  ~~UI库~~
