@@ -1,6 +1,6 @@
 # @zstark/eslint-plugin-zstark
 
-[![Build Status](https://travis-ci.org/PinghuaZhuang/zstark.svg?branch=master)](https://travis-ci.org/PinghuaZhuang/zstark) 
+[![Build Status](https://travis-ci.org/PinghuaZhuang/zstark.svg?branch=master)](https://travis-ci.org/PinghuaZhuang/zstark)
 
 js, ts eslint-plugin.
 
@@ -25,7 +25,7 @@ js, ts eslint-plugin.
    }
    ```
 
-   
+
 
 ## 🔖 script 命令
 
@@ -46,6 +46,6 @@ package.json中添加
 ```json
 {
   "eslint.format.enable": true,
-  "eslint.validate": ["html", "vue", "typescript", "tsx"],
+  "eslint.validate": [/* "html", "vue",  */"typescript"/* , "tsx" */],
 }
 ```

@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "自定义事件",
   "keywords": [
-    "zstark"
+    "zstark",
+    "custom-event"
   ],
   "homepage": "https://github.com/PinghuaZhuang/zstark/tree/master/packages/%40zstark/custom-event",
   "bugs": {
