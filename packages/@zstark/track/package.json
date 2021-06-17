@@ -1,6 +1,6 @@
 {
   "name": "@zstark/track",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "通过注释, 装饰器, DOM属性实现埋点插件. 避免破坏代码结构完整性, 提高代码可读性，也可以针对不同环境或者模式做不同埋点动作。",
   "keywords": [
     "zstark"
