@@ -1,6 +1,7 @@
 # @zstark/eslint-plugin-zstark
 
-[![Build Status](https://travis-ci.org/PinghuaZhuang/zstark.svg?branch=master)](https://travis-ci.org/PinghuaZhuang/zstark)
+[![Build Status](https://travis-ci.org/PinghuaZhuang/zstark.svg?branch=master)](https://travis-ci.org/PinghuaZhuang/zstark)  [![NPM](https://img.shields.io/npm/v/@zstark/eslint-plugin-zstark)](https://www.npmjs.com/package/@zstark/eslint-plugin-zstark)
+
 
 js, ts eslint-plugin.
 

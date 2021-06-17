@@ -1,6 +1,6 @@
 # @zstart/auth
 
-[![Build Status](https://travis-ci.org/PinghuaZhuang/zstark.svg?branch=master)](https://travis-ci.org/PinghuaZhuang/zstark) 
+[![Build Status](https://travis-ci.org/PinghuaZhuang/zstark.svg?branch=master)](https://travis-ci.org/PinghuaZhuang/zstark) [![NPM](https://img.shields.io/npm/v/@zstark/auth)](https://www.npmjs.com/package/@zstark/auth)
 
 快速接入统一登录. 支持 cjs, umd, esm.
 
