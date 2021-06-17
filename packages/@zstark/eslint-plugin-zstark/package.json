@@ -24,7 +24,8 @@
     "lib",
     "typings",
     "*.d.ts",
-    "README.md"
+    "README.md",
+    "index.js"
   ],
   "scripts": {
     "build": "echo 1",
