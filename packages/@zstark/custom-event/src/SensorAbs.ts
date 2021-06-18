@@ -6,6 +6,8 @@ interface SensorOptions {
   useCapture?: boolean; // 捕获或者冒泡
 }
 
+type EventCallback<E extends EventAbs<object>> = (e: CustomEvent<E['data']>) => void
+
 class SensorAbs<T extends EventAbs<object>> {
   public static type: string = 'sensor'
 
@@ -37,14 +39,14 @@ class SensorAbs<T extends EventAbs<object>> {
     console.error(`<<< Please implement the detach function.`, this.type)
   }
 
-  public on(fn: (e: CustomEvent<T['data']>) => void) {
+  public on(fn: EventCallback<T>) {
     this.containers.forEach(element => {
       element.addEventListener(this.type, fn as EventListener, this.options.useCapture === true)
     })
     return this
   }
 
-  public off(fn: (e: CustomEvent<T['data']>) => void) {
+  public off(fn: EventCallback<T>) {
     this.containers.forEach(element => {
       element.removeEventListener(this.type, fn as EventListener, this.options.useCapture === true)
     })

@@ -47,6 +47,6 @@ package.json中添加
 ```json
 {
   "eslint.format.enable": true,
-  "eslint.validate": [/* "html", "vue",  */"typescript"/* , "tsx" */],
+  "eslint.validate": ["typescript"],
 }
 ```

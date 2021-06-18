@@ -2,14 +2,14 @@
  * @file 全局代理点击事件
  * @type track-click
  */
-import { addEventListener/* , removeEventListener */, trackEmit } from './utils'
+import { addEventListener, trackEmit, inWindow } from './utils'
 
 interface TrackClickParams {
   type: string;
   params: object;
 }
 
-const handleClick = function(e: MouseEvent) {
+const trackClickHandle = function(e: MouseEvent) {
   const target = e.target
   if (target && target instanceof Element) {
     const trackParamsStr = target.getAttribute('track-click')
@@ -42,4 +42,8 @@ const handleClick = function(e: MouseEvent) {
   }
 }
 
-addEventListener('click', handleClick)
+if (inWindow) {
+  addEventListener('click', trackClickHandle)
+}
+
+export { trackClickHandle }
