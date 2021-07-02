@@ -26,7 +26,6 @@
     "experimentalDecorators": true,
     "strict": true,
     "types": [
-      "uni-app",
     ],
     "paths": {
       "@/*": ["./src/*"]
