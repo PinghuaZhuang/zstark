@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>@nestark/auth example</title>
+  <title>@zstark/auth example</title>
   <script src="../lib/index.aio.js"></script>
 </head>
 <body>
-  <h1>@nestark/auth example</h1>
+  <h1>@zstark/auth example</h1>
 
   <button id="login">login</button>
   <button id="loginOut">loginOut</button>
@@ -16,9 +16,9 @@
   <script>
     var loginBtn = document.querySelector('#login')
     var loginOutBtn = document.querySelector('#loginOut')
-    var nestarkAuth = window.nestarkAuth
+    var zstarkAuth = window.zstarkAuth
 
-    nestarkAuth.start({
+    zstarkAuth.start({
       path: '/example/:id?/custom-login.html',
       after(e) {
         console.log('after:e:', e)
@@ -43,14 +43,14 @@
       },
     })
 
-    console.log('nestarkAuth', nestarkAuth)
+    console.log('zstarkAuth', zstarkAuth)
 
     loginBtn.onclick = function () {
-      nestarkAuth.login({ id: 123 }, 'mobile=true')
+      zstarkAuth.login({ id: 123 }, 'mobile=true')
     }
 
     loginOutBtn.onclick = function () {
-      nestarkAuth.loginOut({}, 'mobile=true')
+      zstarkAuth.loginOut({}, 'mobile=true')
     }
   </script>
 </body>

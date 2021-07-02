@@ -13,7 +13,7 @@ export default function CreateBrowerVersionMap(userAgent?: string) {
       return u.replace(/^.*MSIE ([\d.]+).*$/, '$1').replace(/^.*rv:([\d.]+).*$/, '$1')
     },
     'Edge': function() {
-      return u.replace(/^.*Edge\/([\d.]+).*$/, '$1')
+      return u.replace(/^.*Edge?\/([\d.]+).*$/, '$1')
     },
     'Firefox': function() {
       return u.replace(/^.*Firefox\/([\d.]+).*$/, '$1').replace(/^.*FxiOS\/([\d.]+).*$/, '$1')

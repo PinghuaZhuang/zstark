@@ -209,7 +209,7 @@ export function getBrowserInfo(userAgent?: string) {
   }
   if (browser === 'Chrome' && parseInt(browserVersion) > 27) {
     engine = 'Blink'
-  } else if (match['Chrome'] && engine === 'WebKit' && parseInt(version['Chrome']()) > 27) {
+  } else if (match['Chrome'] && engine === 'WebKit' && parseInt(browerVersionMap['Chrome']()) > 27) {
     engine = 'Blink'
   } else if (browser === 'Opera' && parseInt(version) > 12) {
     engine = 'Blink'

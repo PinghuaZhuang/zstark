@@ -21,7 +21,7 @@ export default function supports(userAgent?: string) {
     'Safari': u.indexOf('Safari') > -1 && !isChrome,
     'Chrome': isChrome,
     'IE': u.indexOf('MSIE') > -1 || u.indexOf('Trident') > -1,
-    'Edge': u.indexOf('Edge') > -1,
+    'Edge': /Edge?/.test(u),
     'Firefox': u.indexOf('Firefox') > -1 || u.indexOf('FxiOS') > -1,
     'Firefox Focus': u.indexOf('Focus') > -1,
     'Chromium': u.indexOf('Chromium') > -1,
