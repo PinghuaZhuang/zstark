@@ -33,7 +33,7 @@
   },
   "include": [
     "src/**/*",
-    "global.d.ts", "../custom-event",
+    "global.d.ts"
   ],
   "exclude": ["node_modules", "build", "dist", "scripts", "src/.umi/*", "webpack", "jest"]
 }
