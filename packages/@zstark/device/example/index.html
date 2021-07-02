@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>@zstark/device example</title>
+  <script src="../lib/index.aio.js"></script>
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+    #info {
+      padding: 20px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <h1>@zstark/device example</h1>
+  <p>设备信息:</p>
+  <p id="info"></p>
+
+  <script>
+    console.log('device:', device)
+    document.querySelector('#info').innerHTML = JSON.stringify(device.getBrowserInfo())
+  </script>
+</body>
+</html>
