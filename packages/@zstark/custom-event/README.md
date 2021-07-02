@@ -1,6 +1,6 @@
 # @zstark/custom-event
 
-[![Build Status](https://travis-ci.org/PinghuaZhuang/zstark.svg?branch=master)](https://travis-ci.org/PinghuaZhuang/zstark) [![NPM](https://img.shields.io/npm/v/@zstark/custom-event)](https://www.npmjs.com/package/@zstark/custom-event)
+[![Build Status](https://travis-ci.com/PinghuaZhuang/zstark.svg?branch=master)](https://travis-ci.com/PinghuaZhuang/zstark) [![NPM](https://img.shields.io/npm/v/@zstark/custom-event)](https://www.npmjs.com/package/@zstark/custom-event)
 
 自定义事件.
 
@@ -73,4 +73,3 @@ instance.on(e => {
 // 添加事件
 instance.attach()
 ```
-

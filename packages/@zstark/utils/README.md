@@ -1,6 +1,6 @@
 # @zstark/utils
 
-[![Build Status](https://travis-ci.org/PinghuaZhuang/zstark.svg?branch=master)](https://travis-ci.org/PinghuaZhuang/zstark) [![NPM](https://img.shields.io/npm/v/@zstark/utils)](https://www.npmjs.com/package/@zstark/utils)
+[![Build Status](https://travis-ci.com/PinghuaZhuang/zstark.svg?branch=master)](https://travis-ci.com/PinghuaZhuang/zstark) [![NPM](https://img.shields.io/npm/v/@zstark/utils)](https://www.npmjs.com/package/@zstark/utils)
 
 工具/函数库.
 
