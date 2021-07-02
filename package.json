@@ -2,7 +2,7 @@
   "name": "zstark",
   "version": "0.0.0",
   "private": true,
-  "description": "面向前端后台应用快速开发的解决方案.",
+  "description": "面向前端, 提高开发速度.",
   "keywords": [
     "admin",
     "zstark"
@@ -43,7 +43,6 @@
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
-    "cache-loader": "^4.1.0",
     "conventional-changelog-cli": "^2.1.0",
     "core-js": "^2.6.5",
     "husky": "^4.3.0",

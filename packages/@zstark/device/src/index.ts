@@ -131,8 +131,7 @@ export function getDeviceType(userAgent?: string) {
 /**
  * 获取联网类型
  */
-export function getLanguage(): string {
-  // @ts-ignore
+export function getLanguage() {
   return navigator && navigator.browserLanguage || navigator.language
 }
 
@@ -225,13 +224,13 @@ export function getBrowserInfo(userAgent?: string) {
   }
 }
 
-export function getDeviceInfo() {
+export function getDeviceInfo(userAgent?: string) {
   return {
-    deviceType: getDeviceType(),
-    OS: getOS(),
-    OSVersion: getOSVersion(),
+    deviceType: getDeviceType(userAgent),
+    OS: getOS(userAgent),
+    OSVersion: getOSVersion(userAgent),
     language: getLanguage(),
     orientation: getOrientationStatu(),
-    browserInfo: getBrowserInfo(),
+    browserInfo: getBrowserInfo(userAgent),
   }
 }

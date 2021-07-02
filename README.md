@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.com/PinghuaZhuang/zstark.svg?branch=master)](https://travis-ci.com/PinghuaZhuang/zstark) [![Lerna](https://img.shields.io/github/lerna-json/v/PinghuaZhuang/zstark)](https://github.com/PinghuaZhuang/zstark) [![Commit](https://img.shields.io/github/last-commit/pinghuazhuang/zstark.svg)](https://github.com/PinghuaZhuang/zstark/commits/master)
 
+面向前端, 提高开发速度.
+
 
 
 
@@ -16,4 +18,3 @@
 - [x] custom-event
 - [x] eslint-plugin-zstark
 - [ ]  ~~UI库~~
-
