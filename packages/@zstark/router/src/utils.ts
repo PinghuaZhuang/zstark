@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { RouteOptions } from './Route'
 
 export function createRouteMap(route: RouteOptions) {

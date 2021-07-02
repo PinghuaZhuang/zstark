@@ -7,13 +7,13 @@
     "admin",
     "zstark"
   ],
-  "homepage": "https://github.com/PinghuaZhuang/track-report",
+  "homepage": "https://github.com/PinghuaZhuang/zstark",
   "bugs": {
-    "url": "https://github.com/PinghuaZhuang/track-report/issues"
+    "url": "https://github.com/PinghuaZhuang/zstark/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:PinghuaZhuang/track-report.git"
+    "url": "git@github.com:PinghuaZhuang/zstark.git"
   },
   "license": "MIT",
   "author": "zphua2016@gmail.com",

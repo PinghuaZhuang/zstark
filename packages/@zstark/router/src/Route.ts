@@ -1,3 +1,4 @@
+/* eslint-disable */
 export interface RouteOptions {
   name?: string;
   path: string;
@@ -28,10 +29,10 @@ class Route implements Pick<RouteOptions, 'name' | 'path' | 'meta' | 'render'> {
     this.render = renderBind
   }
 
-  // on emit beforeEnter done
+  // on emit beforeEnter(prevRoute) done renderError
 
   public mount() {
-    // promise
+    // promise try catch
     const ret = this.render()
     this.container.innerHTML = ''
 
@@ -40,10 +41,6 @@ class Route implements Pick<RouteOptions, 'name' | 'path' | 'meta' | 'render'> {
     } else {
       this.container.innerHTML = ret
     }
-  }
-
-  public emit(route: Route, prev: Route) {
-
   }
 }
 

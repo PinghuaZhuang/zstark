@@ -1,6 +1,7 @@
 import Route, { RouteOptions } from './Route'
 import { getPathname } from './utils'
 
+/* eslint-disable */
 const EVENT_TYPE = 'popstate'
 
 type RouteInfo = Pick<RouteOptions, 'name' | 'path'>
@@ -70,7 +71,7 @@ class Router {
     if (route) {
       try {
         this.updateRoute(route)
-        route.emit(route, prev)
+        // this.emit(route, prev)
         done()
       } catch (error) {
         fail(error)
