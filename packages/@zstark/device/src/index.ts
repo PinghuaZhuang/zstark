@@ -129,7 +129,7 @@ export function getDeviceType(userAgent?: string) {
 }
 
 /**
- * 获取联网类型
+ * 获取设备语言
  */
 export function getLanguage() {
   return navigator && navigator.browserLanguage || navigator.language
