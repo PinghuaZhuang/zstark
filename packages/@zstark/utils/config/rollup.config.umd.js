@@ -13,7 +13,7 @@ module.exports = common.files.map(o => {
     return {
         input: `lib/${o}.js`,
         output: {
-            file: prod ? `lib/${o}.aio.min.js` : `lib/${o}.aio.js`,
+            file: prod ? `lib/${o}.aio.min.js` : `lib/${o}.umd.js`,
             format: 'umd',
             // When export and export default are not used at the same time, set legacy to true.
             // legacy: true,

@@ -12,7 +12,7 @@ var prod = process.env.NODE_ENV === 'production';
 module.exports = {
     input: 'lib/index.js',
     output: {
-        file: prod ? 'lib/index.aio.min.js' : 'lib/index.aio.js',
+        file: prod ? 'lib/index.aio.min.js' : 'lib/index.umd.js',
         format: 'umd',
         // When export and export default are not used at the same time, set legacy to true.
         // legacy: true,

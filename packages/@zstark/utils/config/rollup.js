@@ -62,4 +62,4 @@ exports.name = 'zstarkUtils';
 exports.banner = banner;
 exports.getCompiler = getCompiler;
 exports.getReplace = getReplace;
-exports.files = ['bom', 'dom', 'index', 'string', 'surpport'];
+exports.files = ['bom', 'dom', 'index', 'string'];
