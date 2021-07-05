@@ -1,6 +1,6 @@
 {
   "name": "@zstark/device",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "获取设备信息",
   "keywords": [
     "zstark"
