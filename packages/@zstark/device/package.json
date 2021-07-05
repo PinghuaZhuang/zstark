@@ -3,7 +3,8 @@
   "version": "1.0.1",
   "description": "获取设备信息",
   "keywords": [
-    "zstark"
+    "zstark",
+    "browser"
   ],
   "homepage": "https://github.com/PinghuaZhuang/zstark/tree/master/packages/%40zstark/device",
   "bugs": {
