@@ -86,10 +86,26 @@ device.getLanguage() // => "zh-CN"
 
 ### getBrowserInfo
 
+获取浏览器信息.
+
+```js
+device.getBrowserInfo(/* userAgent?: string */) 
+/*
+{
+  "info": "Chrome(版本: 91.0.4472.114, 内核: Blink)",
+  "browser": "Chrome",
+  "engine": "Blink",
+  "browserVersion": "91.0.4472.114"
+}
+*/
+```
+
+### getDeviceInfo
+
 获取设备信息. 包含上面所有信息. 
 
 ```js
-device.getLanguage(/* userAgent?: string */) 
+device.getDeviceInfo(/* userAgent?: string */) 
 /*
 {
   "deviceType": "PC",
