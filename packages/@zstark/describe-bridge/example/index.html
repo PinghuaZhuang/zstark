@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>@zstark/describe-bridge example</title>
+  <script src="../lib/index.aio.js"></script>
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+    #info {
+      padding: 20px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <h1>@zstark/describe-bridge example</h1>
+
+  <script>
+    console.log('describe-bridge:', createDes)
+    var des = createDes(window, 'test', console.log)
+    console.log(des)
+    // document.querySelector('#info').innerHTML = JSON.stringify(device.getDeviceInfo())
+    des.first(1).name(2).end()
+  </script>
+</body>
+</html>

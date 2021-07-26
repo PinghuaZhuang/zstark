@@ -5,6 +5,7 @@ module.exports = merge({}, require('@zstark/eslint-plugin-zstark'), {
     uni: true,
     plus: true,
     TRACK: true,
+    Proxy: true,
   },
   rules: {},
 })
