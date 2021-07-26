@@ -21,8 +21,8 @@ import createDes() from '@zstark/describe-bridge'
 ```
 
 ```js
-var des = createDes(window, test, console.log)
-des.first(1).name(2).end()
+createDes(window, test, console.log)
+window.test.first(1).name(2).end()
 
 // => {first: 1, name: 2}
 ```

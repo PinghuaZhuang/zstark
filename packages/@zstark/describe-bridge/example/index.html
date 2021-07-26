@@ -22,10 +22,10 @@
 
   <script>
     console.log('describe-bridge:', createDes)
-    var des = createDes(window, 'test', console.log)
+    createDes(window, 'test', console.log)
     console.log(des)
     // document.querySelector('#info').innerHTML = JSON.stringify(device.getDeviceInfo())
-    des.first(1).name(2).end()
+    window.test.first(1).name(2).end()
   </script>
 </body>
 </html>
